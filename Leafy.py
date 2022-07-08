@@ -23,6 +23,7 @@ engine = pyttsx3.init('sapi5') #sapi5 is the driver for windows
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id) #setting for choosing the voice 
 engine.setProperty('rate', 160) #setting the speed of speech 
+engine.setProperty('volume',1.0) # setting up volume level  between 0 and 1
 
 
 def speak(audio):
