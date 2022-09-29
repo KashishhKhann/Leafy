@@ -89,8 +89,10 @@ def wishMe():
 def username():
 
     speak("What do people call you?")
+    print("What do people call you?")
     uname=takeCommand()
-    speak("Hello there," + uname)
+    speak("Hello there, " + uname)
+    print("Hello there, " + uname)
     speak("How may I help you?")        
 
 
