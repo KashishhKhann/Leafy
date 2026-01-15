@@ -1,0 +1,11 @@
+pyttsx3==2.90
+playsound==1.2.2
+SpeechRecognition==3.10.0
+wikipedia==1.4.0
+pyautogui==0.9.53
+psutil==5.9.4
+pyjokes==0.6.1
+wolframalpha==5.0.0
+Pillow==10.0.0
+python-dotenv==1.0.0
+requests==2.31.0
