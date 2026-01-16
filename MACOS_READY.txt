@@ -1,0 +1,194 @@
+LEAFY IS NOW FULLY MACOS COMPATIBLE!
+
+═══════════════════════════════════════════════════════════════
+
+WHAT WAS DONE:
+
+1. Created platform_utils.py
+   - Handles all OS-specific operations
+   - Auto-detects platform (macOS/Windows/Linux)
+   - Unified API for cross-platform features
+
+2. Updated Leafy.py
+   - Replaced all hardcoded Windows paths
+   - Uses platform_utils for system operations
+   - Proper TTS engine selection (nsss for macOS)
+   - Enhanced error handling
+
+3. Added macOS Setup Tools
+   - MACOS_SETUP.md - Step-by-step guide
+   - setup_macos.sh - Automated setup script
+   - check_compatibility.py - System requirements checker
+   - MACOS_COMPATIBILITY.md - Detailed documentation
+
+4. Security & Configuration
+   - .env for sensitive API keys
+   - Input sanitization
+   - .gitignore to protect secrets
+   - INSTALL.md with all platform instructions
+
+═══════════════════════════════════════════════════════════════
+
+KEY FILES CREATED:
+
+Core Functionality:
+  DONE: platform_utils.py       - Platform abstraction layer
+  DONE: logger.py               - Activity logging
+  DONE: storage.py              - History & notes storage
+  DONE: utils.py                - System detection & validation
+  DONE: config.py               - Configuration management
+
+Setup & Documentation:
+  DONE: setup_macos.sh          - One-click setup for macOS
+  DONE: check_compatibility.py  - System requirements check
+  DONE: MACOS_SETUP.md          - macOS-specific guide
+  DONE: MACOS_COMPATIBILITY.md  - Full compatibility docs
+  DONE: INSTALL.md              - Cross-platform install guide
+  DONE: .env.example            - Secure config template
+  DONE: .gitignore              - Git security
+
+═══════════════════════════════════════════════════════════════
+
+QUICK START FOR MACOS:
+
+Option 1 - Automated Setup (Recommended):
+  bash setup_macos.sh
+
+Option 2 - Manual Setup:
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  cp .env.example .env
+  nano .env  # Add your API keys
+  python Leafy.py
+
+═══════════════════════════════════════════════════════════════
+
+FEATURES NOW WORKING ON MACOS:
+
+DONE: Voice Commands
+DONE: Text-to-Speech (Native macOS speech synthesis)
+DONE: Note Taking & Storage
+DONE: Wikipedia Search
+DONE: WolframAlpha Calculations
+DONE: News Retrieval
+DONE: Command History
+DONE: Screenshots
+DONE: System Monitoring
+DONE: Music Playback
+DONE: Window Switching (Cmd+Tab)
+DONE: Sleep/Restart/Shutdown
+DONE: Empty Trash
+DONE: Real-time GUI Display
+DONE: Comprehensive Logging
+
+═══════════════════════════════════════════════════════════════
+
+PLATFORM-SPECIFIC HANDLING:
+
+Window Switching:
+  macOS:   Cmd+Tab (via osascript)
+  Windows: Alt+Tab (via pyautogui)
+  Linux:   Alt+Tab (via pyautogui)
+
+Screenshots:
+  macOS:   screencapture command
+  Windows: pyautogui
+  Linux:   gnome-screenshot
+
+System Control:
+  macOS:   AppleScript (osascript)
+  Windows: subprocess shutdown commands
+  Linux:   systemctl commands
+
+Text-to-Speech:
+  macOS:   nsss (Native Speech Synthesis)
+  Windows: sapi5
+  Linux:   espeak/festival
+
+═══════════════════════════════════════════════════════════════
+
+SECURITY FEATURES:
+
+DONE: API Keys in .env (not hardcoded)
+DONE: Input sanitization (prevents injection)
+DONE: Secure file permissions
+DONE: .gitignore protection
+DONE: Error logging without sensitive data
+DONE: Microphone permission handling
+
+═══════════════════════════════════════════════════════════════
+
+FILE STRUCTURE:
+
+Leafy/
+├── Leafy.py                    Main application
+├── config.py                   Configuration
+├── logger.py                   Logging
+├── utils.py                    Utilities
+├── storage.py                  Data storage
+├── platform_utils.py           OS compatibility NEW
+├── requirements.txt            Dependencies
+├── .env.example                Config template
+├── .gitignore                  Git security
+├── INSTALL.md                  Install guide
+├── MACOS_SETUP.md              macOS guide NEW
+├── MACOS_COMPATIBILITY.md      Compatibility NEW
+├── setup_macos.sh              Setup script NEW
+├── check_compatibility.py      Checker NEW
+├── logs/                       Activity logs
+└── data/                       Storage
+    ├── notes/
+    └── command_history.json
+
+═══════════════════════════════════════════════════════════════
+
+TESTING COMPATIBILITY:
+
+Run this to check your system:
+  python check_compatibility.py
+
+This verifies:
+  DONE: Python 3.8+
+  DONE: All required modules
+  DONE: File structure
+  DONE: Microphone access
+  DONE: Directory permissions
+
+═══════════════════════════════════════════════════════════════
+
+NEXT STEPS:
+
+1. Copy API keys to .env:
+   cp .env.example .env
+   nano .env
+
+2. Get free API keys:
+   - WolframAlpha: https://developer.wolframalpha.com/
+   - NewsAPI: https://newsapi.org/
+
+3. Run setup:
+   bash setup_macos.sh
+
+4. Start the app:
+   python Leafy.py
+
+5. Allow microphone permission when prompted
+
+═══════════════════════════════════════════════════════════════
+
+YOU'RE ALL SET!
+
+Leafy is now a true cross-platform voice assistant that works
+perfectly on macOS, Windows, and Linux with identical features!
+
+Try these commands:
+  - "How are you?"
+  - "Tell me a joke"
+  - "What's the time?"
+  - "Write a note"
+  - "Show history"
+
+Happy voice commanding!
+
+═══════════════════════════════════════════════════════════════
